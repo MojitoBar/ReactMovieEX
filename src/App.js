@@ -30,9 +30,15 @@ class App extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        greeting: 'hello again'
+        movies: [
+          {
+            title: "trainspotting",
+            poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcHoWC2d7UF6xrRP5dlloaB_Hmbn5uvfNkJVBCAzgGK-h7b4Rn"
+          },
+          ...this.state.movies
+        ]
       })
-    }, 5000);
+    }, 2000)
   }
 
   render() {
